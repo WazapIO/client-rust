@@ -15,10 +15,10 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 
-/// struct for typed errors of method [`instances_instance_key_groups_admin_get`]
+/// struct for typed errors of method [`add_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsAdminGetError {
+pub enum AddParticipantError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -26,10 +26,10 @@ pub enum InstancesInstanceKeyGroupsAdminGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_create_post`]
+/// struct for typed errors of method [`create_group`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsCreatePostError {
+pub enum CreateGroupError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -37,10 +37,10 @@ pub enum InstancesInstanceKeyGroupsCreatePostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_get`]
+/// struct for typed errors of method [`demote_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGetError {
+pub enum DemoteParticipantError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -48,10 +48,10 @@ pub enum InstancesInstanceKeyGroupsGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_announce_put`]
+/// struct for typed errors of method [`get_admin_groups`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdAnnouncePutError {
+pub enum GetAdminGroupsError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -59,10 +59,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdAnnouncePutError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_delete`]
+/// struct for typed errors of method [`get_all_groups`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdDeleteError {
+pub enum GetAllGroupsError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -70,10 +70,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdDeleteError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_description_put`]
+/// struct for typed errors of method [`get_group`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdDescriptionPutError {
+pub enum GetGroupError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -81,10 +81,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdDescriptionPutError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_get`]
+/// struct for typed errors of method [`get_group_from_invite_link`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdGetError {
+pub enum GetGroupFromInviteLinkError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -92,10 +92,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_invite_code_get`]
+/// struct for typed errors of method [`get_group_invite_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdInviteCodeGetError {
+pub enum GetGroupInviteCodeError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -103,10 +103,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdInviteCodeGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_lock_put`]
+/// struct for typed errors of method [`leave_group`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdLockPutError {
+pub enum LeaveGroupError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -114,10 +114,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdLockPutError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_name_put`]
+/// struct for typed errors of method [`promote_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdNamePutError {
+pub enum PromoteParticipantError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -125,10 +125,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdNamePutError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_participants_add_post`]
+/// struct for typed errors of method [`remove_participant`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdParticipantsAddPostError {
+pub enum RemoveParticipantError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -136,10 +136,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdParticipantsAddPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_participants_demote_put`]
+/// struct for typed errors of method [`set_group_announce`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutError {
+pub enum SetGroupAnnounceError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -147,10 +147,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_participants_promote_put`]
+/// struct for typed errors of method [`set_group_description`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutError {
+pub enum SetGroupDescriptionError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -158,10 +158,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_participants_remove_delete`]
+/// struct for typed errors of method [`set_group_locked`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteError {
+pub enum SetGroupLockedError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -169,10 +169,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_group_id_profile_pic_put`]
+/// struct for typed errors of method [`set_group_name`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsGroupIdProfilePicPutError {
+pub enum SetGroupNameError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -180,10 +180,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdProfilePicPutError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_groups_invite_info_get`]
+/// struct for typed errors of method [`set_group_picture`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGroupsInviteInfoGetError {
+pub enum SetGroupPictureError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -192,14 +192,14 @@ pub enum InstancesInstanceKeyGroupsInviteInfoGetError {
 }
 
 
-/// Returns list of all groups in which you are admin.
-pub async fn instances_instance_key_groups_admin_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsAdminGetError>> {
+/// Handles adding participants to a group. You must be admin in the group or the query will fail.
+pub async fn add_participant(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<AddParticipantError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
 
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/admin", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants/add", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
 
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
@@ -212,6 +212,7 @@ pub async fn instances_instance_key_groups_admin_get(configuration: &configurati
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
+    local_var_req_builder = local_var_req_builder.json(&data);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -222,14 +223,14 @@ pub async fn instances_instance_key_groups_admin_get(configuration: &configurati
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsAdminGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<AddParticipantError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Creates a group with the participant data. The creator is automatically added to the group.
-pub async fn instances_instance_key_groups_create_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::GroupCreatePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsCreatePostError>> {
+pub async fn create_group(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::GroupCreatePayload) -> Result<crate::models::ApiResponse, Error<CreateGroupError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -259,14 +260,87 @@ pub async fn instances_instance_key_groups_create_post(configuration: &configura
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsCreatePostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<CreateGroupError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Demotes admins in groups. You must be admin in the group or the query will fail.
+pub async fn demote_participant(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<DemoteParticipantError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants/demote", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<DemoteParticipantError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Returns list of all groups in which you are admin.
+pub async fn get_admin_groups(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<GetAdminGroupsError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/admin", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<GetAdminGroupsError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-pub async fn instances_instance_key_groups_get(configuration: &configuration::Configuration, instance_key: &str, include_participants: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGetError>> {
+pub async fn get_all_groups(configuration: &configuration::Configuration, instance_key: &str, include_participants: Option<&str>) -> Result<crate::models::ApiResponse, Error<GetAllGroupsError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -298,123 +372,14 @@ pub async fn instances_instance_key_groups_get(configuration: &configuration::Co
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Set if non-admins are allowed to send messages in groups
-pub async fn instances_instance_key_groups_group_id_announce_put(configuration: &configuration::Configuration, instance_key: &str, announce: bool, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdAnnouncePutError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/announce", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), announce=announce, group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdAnnouncePutError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Leaves the specified group.
-pub async fn instances_instance_key_groups_group_id_delete(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdDeleteError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdDeleteError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Changes the group description
-pub async fn instances_instance_key_groups_group_id_description_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateDescriptionPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdDescriptionPutError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/description", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdDescriptionPutError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<GetAllGroupsError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Fetches the group data.
-pub async fn instances_instance_key_groups_group_id_get(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdGetError>> {
+pub async fn get_group(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<GetGroupError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -443,308 +408,14 @@ pub async fn instances_instance_key_groups_group_id_get(configuration: &configur
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Gets the invite code of the group.
-pub async fn instances_instance_key_groups_group_id_invite_code_get(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdInviteCodeGetError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/invite-code", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdInviteCodeGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Set if non-admins are allowed to change the group dp and other stuff
-pub async fn instances_instance_key_groups_group_id_lock_put(configuration: &configuration::Configuration, instance_key: &str, locked: bool, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdLockPutError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/lock", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), locked=locked, group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdLockPutError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Changes the group name. The max limit is 22 chars
-pub async fn instances_instance_key_groups_group_id_name_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateNamePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdNamePutError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/name", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdNamePutError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Handles adding participants to a group. You must be admin in the group or the query will fail.
-pub async fn instances_instance_key_groups_group_id_participants_add_post(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsAddPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants/add", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdParticipantsAddPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Demotes admins in groups. You must be admin in the group or the query will fail.
-pub async fn instances_instance_key_groups_group_id_participants_demote_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants/demote", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Promotes participants to admin. You must be admin in the group or the query will fail.
-pub async fn instances_instance_key_groups_group_id_participants_promote_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants/promote", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Handles removing participants from a group. You must be admin in the group or the query will fail.
-pub async fn instances_instance_key_groups_group_id_participants_remove_delete(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants/remove", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Changes the group profile picture. Currently it only seems to accept JPEG images only
-pub async fn instances_instance_key_groups_group_id_profile_pic_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, instances_instance_key_groups_group_id_profile_pic_put_request: crate::models::InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdProfilePicPutError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/profile-pic", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&instances_instance_key_groups_group_id_profile_pic_put_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsGroupIdProfilePicPutError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<GetGroupError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-pub async fn instances_instance_key_groups_invite_info_get(configuration: &configuration::Configuration, instance_key: &str, invite_link: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsInviteInfoGetError>> {
+pub async fn get_group_from_invite_link(configuration: &configuration::Configuration, instance_key: &str, invite_link: &str) -> Result<crate::models::ApiResponse, Error<GetGroupFromInviteLinkError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -774,7 +445,336 @@ pub async fn instances_instance_key_groups_invite_info_get(configuration: &confi
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyGroupsInviteInfoGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<GetGroupFromInviteLinkError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Gets the invite code of the group.
+pub async fn get_group_invite_code(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<GetGroupInviteCodeError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/invite-code", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<GetGroupInviteCodeError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Leaves the specified group.
+pub async fn leave_group(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<LeaveGroupError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<LeaveGroupError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Promotes participants to admin. You must be admin in the group or the query will fail.
+pub async fn promote_participant(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<PromoteParticipantError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants/promote", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<PromoteParticipantError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Handles removing participants from a group. You must be admin in the group or the query will fail.
+pub async fn remove_participant(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<RemoveParticipantError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants/remove", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<RemoveParticipantError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Set if non-admins are allowed to send messages in groups
+pub async fn set_group_announce(configuration: &configuration::Configuration, instance_key: &str, announce: bool, group_id: &str) -> Result<crate::models::ApiResponse, Error<SetGroupAnnounceError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/announce", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), announce=announce, group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SetGroupAnnounceError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Changes the group description
+pub async fn set_group_description(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateDescriptionPayload) -> Result<crate::models::ApiResponse, Error<SetGroupDescriptionError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/description", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SetGroupDescriptionError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Set if non-admins are allowed to change the group dp and other stuff
+pub async fn set_group_locked(configuration: &configuration::Configuration, instance_key: &str, locked: bool, group_id: &str) -> Result<crate::models::ApiResponse, Error<SetGroupLockedError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/lock", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), locked=locked, group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SetGroupLockedError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Changes the group name. The max limit is 22 chars
+pub async fn set_group_name(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateNamePayload) -> Result<crate::models::ApiResponse, Error<SetGroupNameError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/name", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SetGroupNameError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Changes the group profile picture. Currently it only seems to accept JPEG images only
+pub async fn set_group_picture(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, set_group_picture_request: crate::models::SetGroupPictureRequest) -> Result<crate::models::ApiResponse, Error<SetGroupPictureError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/profile-pic", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&set_group_picture_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SetGroupPictureError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

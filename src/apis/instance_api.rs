@@ -15,10 +15,10 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 
-/// struct for typed errors of method [`instances_create_get`]
+/// struct for typed errors of method [`change_webhook_url`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesCreateGetError {
+pub enum ChangeWebhookUrlError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -26,10 +26,10 @@ pub enum InstancesCreateGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_contacts_get`]
+/// struct for typed errors of method [`create_instance`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyContactsGetError {
+pub enum CreateInstanceError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -37,10 +37,10 @@ pub enum InstancesInstanceKeyContactsGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_delete_delete`]
+/// struct for typed errors of method [`delete_instance`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyDeleteDeleteError {
+pub enum DeleteInstanceError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -48,10 +48,10 @@ pub enum InstancesInstanceKeyDeleteDeleteError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_get`]
+/// struct for typed errors of method [`get_contacts`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyGetError {
+pub enum GetContactsError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -59,10 +59,10 @@ pub enum InstancesInstanceKeyGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_logout_delete`]
+/// struct for typed errors of method [`get_instance`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyLogoutDeleteError {
+pub enum GetInstanceError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -70,10 +70,10 @@ pub enum InstancesInstanceKeyLogoutDeleteError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_qrcode_get`]
+/// struct for typed errors of method [`get_qr_code`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyQrcodeGetError {
+pub enum GetQrCodeError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -81,10 +81,10 @@ pub enum InstancesInstanceKeyQrcodeGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_webhook_put`]
+/// struct for typed errors of method [`list_instances`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyWebhookPutError {
+pub enum ListInstancesError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -92,10 +92,10 @@ pub enum InstancesInstanceKeyWebhookPutError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_list_get`]
+/// struct for typed errors of method [`logout_instance`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesListGetError {
+pub enum LogoutInstanceError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -103,9 +103,46 @@ pub enum InstancesListGetError {
     UnknownValue(serde_json::Value),
 }
 
+
+/// Changes the webhook url of an instance.
+pub async fn change_webhook_url(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::WebhookPayload) -> Result<crate::models::ApiResponse, Error<ChangeWebhookUrlError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/webhook", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<ChangeWebhookUrlError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
 
 /// This endpoint is used to create a new WhatsApp Web instance.
-pub async fn instances_create_get(configuration: &configuration::Configuration, instance_key: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesCreateGetError>> {
+pub async fn create_instance(configuration: &configuration::Configuration, instance_key: Option<&str>) -> Result<crate::models::ApiResponse, Error<CreateInstanceError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -137,50 +174,14 @@ pub async fn instances_create_get(configuration: &configuration::Configuration, 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesCreateGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Fetches the list of contacts in the instance.
-pub async fn instances_instance_key_contacts_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyContactsGetError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/contacts", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyContactsGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<CreateInstanceError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Deletes the instance with the provided key.
-pub async fn instances_instance_key_delete_delete(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyDeleteDeleteError>> {
+pub async fn delete_instance(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<DeleteInstanceError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -209,14 +210,50 @@ pub async fn instances_instance_key_delete_delete(configuration: &configuration:
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyDeleteDeleteError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<DeleteInstanceError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Fetches the list of contacts in the instance.
+pub async fn get_contacts(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<GetContactsError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/contacts", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<GetContactsError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Returns the instance data of single instance with connection status.
-pub async fn instances_instance_key_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGetError>> {
+pub async fn get_instance(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<GetInstanceError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -245,50 +282,14 @@ pub async fn instances_instance_key_get(configuration: &configuration::Configura
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Logouts of the instance with the provided key.
-pub async fn instances_instance_key_logout_delete(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyLogoutDeleteError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/logout", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyLogoutDeleteError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<GetInstanceError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Returns the qrcode in the base64 format.
-pub async fn instances_instance_key_qrcode_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyQrcodeGetError>> {
+pub async fn get_qr_code(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<GetQrCodeError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -317,51 +318,14 @@ pub async fn instances_instance_key_qrcode_get(configuration: &configuration::Co
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyQrcodeGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Changes the webhook url of an instance.
-pub async fn instances_instance_key_webhook_put(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::WebhookPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyWebhookPutError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/webhook", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyWebhookPutError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<GetQrCodeError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Fetches the list of all Instances with login status.
-pub async fn instances_list_get(configuration: &configuration::Configuration, ) -> Result<crate::models::ApiResponse, Error<InstancesListGetError>> {
+pub async fn list_instances(configuration: &configuration::Configuration, ) -> Result<crate::models::ApiResponse, Error<ListInstancesError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -390,7 +354,43 @@ pub async fn instances_list_get(configuration: &configuration::Configuration, ) 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesListGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<ListInstancesError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Logouts of the instance with the provided key.
+pub async fn logout_instance(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<LogoutInstanceError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/logout", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::DELETE, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<LogoutInstanceError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

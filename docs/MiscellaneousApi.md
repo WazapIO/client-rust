@@ -4,14 +4,14 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**instances_instance_key_misc_profile_pic_get**](MiscellaneousApi.md#instances_instance_key_misc_profile_pic_get) | **GET** /instances/{instance_key}/misc/profile-pic | Get profile pic.
-[**instances_instance_key_misc_user_info_post**](MiscellaneousApi.md#instances_instance_key_misc_user_info_post) | **POST** /instances/{instance_key}/misc/user-info | Fetches the users info.
+[**get_profile_pic**](MiscellaneousApi.md#get_profile_pic) | **GET** /instances/{instance_key}/misc/profile-pic | Get profile pic.
+[**get_users_info**](MiscellaneousApi.md#get_users_info) | **POST** /instances/{instance_key}/misc/user-info | Fetches the users info.
 
 
 
-## instances_instance_key_misc_profile_pic_get
+## get_profile_pic
 
-> crate::models::ApiResponse instances_instance_key_misc_profile_pic_get(instance_key, jid)
+> crate::models::ApiResponse get_profile_pic(instance_key, jid)
 Get profile pic.
 
 Returns the profile pic of the given user.
@@ -40,9 +40,9 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## instances_instance_key_misc_user_info_post
+## get_users_info
 
-> crate::models::ApiResponse instances_instance_key_misc_user_info_post(instance_key, data)
+> crate::models::ApiResponse get_users_info(instance_key, data)
 Fetches the users info.
 
 Gets the user info for the given user ids. This does not checks if user is registered or not

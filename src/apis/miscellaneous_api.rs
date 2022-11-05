@@ -15,10 +15,10 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 
-/// struct for typed errors of method [`instances_instance_key_misc_profile_pic_get`]
+/// struct for typed errors of method [`get_profile_pic`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyMiscProfilePicGetError {
+pub enum GetProfilePicError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -26,10 +26,10 @@ pub enum InstancesInstanceKeyMiscProfilePicGetError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_misc_user_info_post`]
+/// struct for typed errors of method [`get_users_info`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyMiscUserInfoPostError {
+pub enum GetUsersInfoError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -39,7 +39,7 @@ pub enum InstancesInstanceKeyMiscUserInfoPostError {
 
 
 /// Returns the profile pic of the given user.
-pub async fn instances_instance_key_misc_profile_pic_get(configuration: &configuration::Configuration, instance_key: &str, jid: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyMiscProfilePicGetError>> {
+pub async fn get_profile_pic(configuration: &configuration::Configuration, instance_key: &str, jid: &str) -> Result<crate::models::ApiResponse, Error<GetProfilePicError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -69,14 +69,14 @@ pub async fn instances_instance_key_misc_profile_pic_get(configuration: &configu
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyMiscProfilePicGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<GetProfilePicError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Gets the user info for the given user ids. This does not checks if user is registered or not
-pub async fn instances_instance_key_misc_user_info_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::UserInfoPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyMiscUserInfoPostError>> {
+pub async fn get_users_info(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::UserInfoPayload) -> Result<crate::models::ApiResponse, Error<GetUsersInfoError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -106,7 +106,7 @@ pub async fn instances_instance_key_misc_user_info_post(configuration: &configur
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyMiscUserInfoPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<GetUsersInfoError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

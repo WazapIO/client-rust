@@ -15,10 +15,10 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 
-/// struct for typed errors of method [`instances_instance_key_business_catalog_get`]
+/// struct for typed errors of method [`fetch_catlog`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeyBusinessCatalogGetError {
+pub enum FetchCatlogError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -28,7 +28,7 @@ pub enum InstancesInstanceKeyBusinessCatalogGetError {
 
 
 /// Gets list of all products registered by you.
-pub async fn instances_instance_key_business_catalog_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyBusinessCatalogGetError>> {
+pub async fn fetch_catlog(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<FetchCatlogError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -57,7 +57,7 @@ pub async fn instances_instance_key_business_catalog_get(configuration: &configu
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeyBusinessCatalogGetError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<FetchCatlogError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

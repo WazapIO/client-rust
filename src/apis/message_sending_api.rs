@@ -15,10 +15,10 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 
-/// struct for typed errors of method [`instances_instance_key_send_audio_post`]
+/// struct for typed errors of method [`send_audio`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendAudioPostError {
+pub enum SendAudioError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -26,10 +26,10 @@ pub enum InstancesInstanceKeySendAudioPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_button_media_post`]
+/// struct for typed errors of method [`send_button_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendButtonMediaPostError {
+pub enum SendButtonMessageError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -37,10 +37,10 @@ pub enum InstancesInstanceKeySendButtonMediaPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_buttons_post`]
+/// struct for typed errors of method [`send_button_with_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendButtonsPostError {
+pub enum SendButtonWithMediaError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -48,10 +48,10 @@ pub enum InstancesInstanceKeySendButtonsPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_contact_post`]
+/// struct for typed errors of method [`send_contact`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendContactPostError {
+pub enum SendContactError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -59,10 +59,10 @@ pub enum InstancesInstanceKeySendContactPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_document_post`]
+/// struct for typed errors of method [`send_document`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendDocumentPostError {
+pub enum SendDocumentError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -70,10 +70,10 @@ pub enum InstancesInstanceKeySendDocumentPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_image_post`]
+/// struct for typed errors of method [`send_image`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendImagePostError {
+pub enum SendImageError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -81,10 +81,10 @@ pub enum InstancesInstanceKeySendImagePostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_list_post`]
+/// struct for typed errors of method [`send_list_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendListPostError {
+pub enum SendListMessageError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -92,10 +92,10 @@ pub enum InstancesInstanceKeySendListPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_location_post`]
+/// struct for typed errors of method [`send_location`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendLocationPostError {
+pub enum SendLocationError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -103,10 +103,10 @@ pub enum InstancesInstanceKeySendLocationPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_media_post`]
+/// struct for typed errors of method [`send_media_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendMediaPostError {
+pub enum SendMediaMessageError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -114,10 +114,10 @@ pub enum InstancesInstanceKeySendMediaPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_poll_post`]
+/// struct for typed errors of method [`send_poll_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendPollPostError {
+pub enum SendPollMessageError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -125,10 +125,10 @@ pub enum InstancesInstanceKeySendPollPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_template_media_post`]
+/// struct for typed errors of method [`send_template`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendTemplateMediaPostError {
+pub enum SendTemplateError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -136,10 +136,10 @@ pub enum InstancesInstanceKeySendTemplateMediaPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_template_post`]
+/// struct for typed errors of method [`send_template_with_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendTemplatePostError {
+pub enum SendTemplateWithMediaError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -147,10 +147,10 @@ pub enum InstancesInstanceKeySendTemplatePostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_text_post`]
+/// struct for typed errors of method [`send_text_message`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendTextPostError {
+pub enum SendTextMessageError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -158,10 +158,10 @@ pub enum InstancesInstanceKeySendTextPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_upload_post`]
+/// struct for typed errors of method [`send_video`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendUploadPostError {
+pub enum SendVideoError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -169,10 +169,10 @@ pub enum InstancesInstanceKeySendUploadPostError {
     UnknownValue(serde_json::Value),
 }
 
-/// struct for typed errors of method [`instances_instance_key_send_video_post`]
+/// struct for typed errors of method [`upload_media`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
-pub enum InstancesInstanceKeySendVideoPostError {
+pub enum UploadMediaError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -182,7 +182,7 @@ pub enum InstancesInstanceKeySendVideoPostError {
 
 
 /// Sends a audio message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn instances_instance_key_send_audio_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_audio_post_request: crate::models::InstancesInstanceKeySendAudioPostRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendAudioPostError>> {
+pub async fn send_audio(configuration: &configuration::Configuration, instance_key: &str, to: &str, send_audio_request: crate::models::SendAudioRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<SendAudioError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -205,7 +205,7 @@ pub async fn instances_instance_key_send_audio_post(configuration: &configuratio
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
-    local_var_req_builder = local_var_req_builder.json(&instances_instance_key_send_audio_post_request);
+    local_var_req_builder = local_var_req_builder.json(&send_audio_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -216,51 +216,14 @@ pub async fn instances_instance_key_send_audio_post(configuration: &configuratio
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendAudioPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-pub async fn instances_instance_key_send_button_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ButtonMessageWithMediaPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendButtonMediaPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/send/button-media", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeySendButtonMediaPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendAudioError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends an interactive button message to the given user. Make sure that all the button ids are unique
-pub async fn instances_instance_key_send_buttons_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ButtonMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendButtonsPostError>> {
+pub async fn send_button_message(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ButtonMessagePayload) -> Result<crate::models::ApiResponse, Error<SendButtonMessageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -290,14 +253,51 @@ pub async fn instances_instance_key_send_buttons_post(configuration: &configurat
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendButtonsPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendButtonMessageError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
+pub async fn send_button_with_media(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ButtonMessageWithMediaPayload) -> Result<crate::models::ApiResponse, Error<SendButtonWithMediaError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/send/button-media", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SendButtonWithMediaError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends a contact (vcard) message to the given user.
-pub async fn instances_instance_key_send_contact_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ContactMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendContactPostError>> {
+pub async fn send_contact(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ContactMessagePayload) -> Result<crate::models::ApiResponse, Error<SendContactError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -327,14 +327,14 @@ pub async fn instances_instance_key_send_contact_post(configuration: &configurat
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendContactPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendContactError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends a document message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn instances_instance_key_send_document_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_document_post_request: crate::models::InstancesInstanceKeySendDocumentPostRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendDocumentPostError>> {
+pub async fn send_document(configuration: &configuration::Configuration, instance_key: &str, to: &str, send_document_request: crate::models::SendDocumentRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<SendDocumentError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -357,7 +357,7 @@ pub async fn instances_instance_key_send_document_post(configuration: &configura
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
-    local_var_req_builder = local_var_req_builder.json(&instances_instance_key_send_document_post_request);
+    local_var_req_builder = local_var_req_builder.json(&send_document_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -368,14 +368,14 @@ pub async fn instances_instance_key_send_document_post(configuration: &configura
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendDocumentPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendDocumentError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends a image message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn instances_instance_key_send_image_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_image_post_request: crate::models::InstancesInstanceKeySendImagePostRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendImagePostError>> {
+pub async fn send_image(configuration: &configuration::Configuration, instance_key: &str, to: &str, send_image_request: crate::models::SendImageRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<SendImageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -398,7 +398,7 @@ pub async fn instances_instance_key_send_image_post(configuration: &configuratio
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
-    local_var_req_builder = local_var_req_builder.json(&instances_instance_key_send_image_post_request);
+    local_var_req_builder = local_var_req_builder.json(&send_image_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -409,14 +409,14 @@ pub async fn instances_instance_key_send_image_post(configuration: &configuratio
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendImagePostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendImageError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends an interactive List message to the given user.
-pub async fn instances_instance_key_send_list_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ListMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendListPostError>> {
+pub async fn send_list_message(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ListMessagePayload) -> Result<crate::models::ApiResponse, Error<SendListMessageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -446,14 +446,14 @@ pub async fn instances_instance_key_send_list_post(configuration: &configuration
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendListPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendListMessageError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends a location message to the given user. This is static location and does not update Note: The Address and Url fields are optional
-pub async fn instances_instance_key_send_location_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::LocationMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendLocationPostError>> {
+pub async fn send_location(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::LocationMessagePayload) -> Result<crate::models::ApiResponse, Error<SendLocationError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -483,14 +483,14 @@ pub async fn instances_instance_key_send_location_post(configuration: &configura
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendLocationPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendLocationError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends a media message to the given user.
-pub async fn instances_instance_key_send_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::SendMediaPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendMediaPostError>> {
+pub async fn send_media_message(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::SendMediaPayload) -> Result<crate::models::ApiResponse, Error<SendMediaMessageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -520,14 +520,14 @@ pub async fn instances_instance_key_send_media_post(configuration: &configuratio
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendMediaPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendMediaMessageError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends an interactive poll message to the given user. The poll message is a new feature that is currently in beta.
-pub async fn instances_instance_key_send_poll_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::PollMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendPollPostError>> {
+pub async fn send_poll_message(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::PollMessagePayload) -> Result<crate::models::ApiResponse, Error<SendPollMessageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -557,51 +557,14 @@ pub async fn instances_instance_key_send_poll_post(configuration: &configuration
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendPollPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-pub async fn instances_instance_key_send_template_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TemplateButtonWithMediaPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendTemplateMediaPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/send/template-media", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&data);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeySendTemplateMediaPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendPollMessageError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends an interactive template message to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-pub async fn instances_instance_key_send_template_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TemplateButtonPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendTemplatePostError>> {
+pub async fn send_template(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TemplateButtonPayload) -> Result<crate::models::ApiResponse, Error<SendTemplateError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -631,14 +594,51 @@ pub async fn instances_instance_key_send_template_post(configuration: &configura
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendTemplatePostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendTemplateError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
+pub async fn send_template_with_media(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TemplateButtonWithMediaPayload) -> Result<crate::models::ApiResponse, Error<SendTemplateWithMediaError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/send/template-media", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SendTemplateWithMediaError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends a text message to the given user.
-pub async fn instances_instance_key_send_text_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TextMessage) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendTextPostError>> {
+pub async fn send_text_message(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TextMessage) -> Result<crate::models::ApiResponse, Error<SendTextMessageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -668,52 +668,14 @@ pub async fn instances_instance_key_send_text_post(configuration: &configuration
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendTextPostError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
-/// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-pub async fn instances_instance_key_send_upload_post(configuration: &configuration::Configuration, instance_key: &str, r#type: &str, instances_instance_key_send_upload_post_request: crate::models::InstancesInstanceKeySendUploadPostRequest) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendUploadPostError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/send/upload", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
-
-    local_var_req_builder = local_var_req_builder.query(&[("type", &r#type.to_string())]);
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-    local_var_req_builder = local_var_req_builder.json(&instances_instance_key_send_upload_post_request);
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeySendUploadPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendTextMessageError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
 }
 
 /// Sends a video message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn instances_instance_key_send_video_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_video_post_request: crate::models::InstancesInstanceKeySendVideoPostRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendVideoPostError>> {
+pub async fn send_video(configuration: &configuration::Configuration, instance_key: &str, to: &str, send_video_request: crate::models::SendVideoRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<SendVideoError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -736,7 +698,7 @@ pub async fn instances_instance_key_send_video_post(configuration: &configuratio
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
-    local_var_req_builder = local_var_req_builder.json(&instances_instance_key_send_video_post_request);
+    local_var_req_builder = local_var_req_builder.json(&send_video_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;
@@ -747,7 +709,45 @@ pub async fn instances_instance_key_send_video_post(configuration: &configuratio
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
-        let local_var_entity: Option<InstancesInstanceKeySendVideoPostError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_entity: Option<SendVideoError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+pub async fn upload_media(configuration: &configuration::Configuration, instance_key: &str, r#type: &str, upload_media_request: crate::models::UploadMediaRequest) -> Result<crate::models::ApiResponse, Error<UploadMediaError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/send/upload", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("type", &r#type.to_string())]);
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&upload_media_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<UploadMediaError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

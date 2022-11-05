@@ -4,13 +4,13 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**instances_instance_key_business_catalog_get**](BusinessManagementApi.md#instances_instance_key_business_catalog_get) | **GET** /instances/{instance_key}/business/catalog | Fetches the catlog.
+[**fetch_catlog**](BusinessManagementApi.md#fetch_catlog) | **GET** /instances/{instance_key}/business/catalog | Fetches the catlog.
 
 
 
-## instances_instance_key_business_catalog_get
+## fetch_catlog
 
-> crate::models::ApiResponse instances_instance_key_business_catalog_get(instance_key)
+> crate::models::ApiResponse fetch_catlog(instance_key)
 Fetches the catlog.
 
 Gets list of all products registered by you.
