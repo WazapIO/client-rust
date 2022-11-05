@@ -19,10 +19,10 @@ use super::{Error, configuration};
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsAdminGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -30,10 +30,10 @@ pub enum InstancesInstanceKeyGroupsAdminGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsCreatePostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -41,10 +41,10 @@ pub enum InstancesInstanceKeyGroupsCreatePostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -52,10 +52,10 @@ pub enum InstancesInstanceKeyGroupsGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdAnnouncePutError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -63,10 +63,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdAnnouncePutError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdDeleteError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -74,10 +74,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdDeleteError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdDescriptionPutError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -85,10 +85,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdDescriptionPutError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -96,10 +96,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdInviteCodeGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -107,10 +107,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdInviteCodeGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdLockPutError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -118,10 +118,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdLockPutError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdNamePutError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -129,10 +129,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdNamePutError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdParticipantsAddPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -140,10 +140,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdParticipantsAddPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -151,10 +151,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -162,10 +162,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -173,10 +173,10 @@ pub enum InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsGroupIdProfilePicPutError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -184,16 +184,16 @@ pub enum InstancesInstanceKeyGroupsGroupIdProfilePicPutError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGroupsInviteInfoGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
 
 /// Returns list of all groups in which you are admin.
-pub async fn instances_instance_key_groups_admin_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsAdminGetError>> {
+pub async fn instances_instance_key_groups_admin_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsAdminGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -229,7 +229,7 @@ pub async fn instances_instance_key_groups_admin_get(configuration: &configurati
 }
 
 /// Creates a group with the participant data. The creator is automatically added to the group.
-pub async fn instances_instance_key_groups_create_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodGroupCreatePayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsCreatePostError>> {
+pub async fn instances_instance_key_groups_create_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::GroupCreatePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsCreatePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -266,7 +266,7 @@ pub async fn instances_instance_key_groups_create_post(configuration: &configura
 }
 
 /// Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
-pub async fn instances_instance_key_groups_get(configuration: &configuration::Configuration, instance_key: &str, include_participants: Option<&str>) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGetError>> {
+pub async fn instances_instance_key_groups_get(configuration: &configuration::Configuration, instance_key: &str, include_participants: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -305,7 +305,7 @@ pub async fn instances_instance_key_groups_get(configuration: &configuration::Co
 }
 
 /// Set if non-admins are allowed to send messages in groups
-pub async fn instances_instance_key_groups_group_id_announce_put(configuration: &configuration::Configuration, instance_key: &str, announce: bool, group_id: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdAnnouncePutError>> {
+pub async fn instances_instance_key_groups_group_id_announce_put(configuration: &configuration::Configuration, instance_key: &str, announce: bool, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdAnnouncePutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -341,7 +341,7 @@ pub async fn instances_instance_key_groups_group_id_announce_put(configuration: 
 }
 
 /// Leaves the specified group.
-pub async fn instances_instance_key_groups_group_id_delete(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdDeleteError>> {
+pub async fn instances_instance_key_groups_group_id_delete(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdDeleteError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -377,7 +377,7 @@ pub async fn instances_instance_key_groups_group_id_delete(configuration: &confi
 }
 
 /// Changes the group description
-pub async fn instances_instance_key_groups_group_id_description_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::StructsPeriodGroupUpdateDescriptionPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdDescriptionPutError>> {
+pub async fn instances_instance_key_groups_group_id_description_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateDescriptionPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdDescriptionPutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -414,7 +414,7 @@ pub async fn instances_instance_key_groups_group_id_description_put(configuratio
 }
 
 /// Fetches the group data.
-pub async fn instances_instance_key_groups_group_id_get(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdGetError>> {
+pub async fn instances_instance_key_groups_group_id_get(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -450,7 +450,7 @@ pub async fn instances_instance_key_groups_group_id_get(configuration: &configur
 }
 
 /// Gets the invite code of the group.
-pub async fn instances_instance_key_groups_group_id_invite_code_get(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdInviteCodeGetError>> {
+pub async fn instances_instance_key_groups_group_id_invite_code_get(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdInviteCodeGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -486,7 +486,7 @@ pub async fn instances_instance_key_groups_group_id_invite_code_get(configuratio
 }
 
 /// Set if non-admins are allowed to change the group dp and other stuff
-pub async fn instances_instance_key_groups_group_id_lock_put(configuration: &configuration::Configuration, instance_key: &str, locked: bool, group_id: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdLockPutError>> {
+pub async fn instances_instance_key_groups_group_id_lock_put(configuration: &configuration::Configuration, instance_key: &str, locked: bool, group_id: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdLockPutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -522,7 +522,7 @@ pub async fn instances_instance_key_groups_group_id_lock_put(configuration: &con
 }
 
 /// Changes the group name. The max limit is 22 chars
-pub async fn instances_instance_key_groups_group_id_name_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::StructsPeriodGroupUpdateNamePayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdNamePutError>> {
+pub async fn instances_instance_key_groups_group_id_name_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateNamePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdNamePutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -559,7 +559,7 @@ pub async fn instances_instance_key_groups_group_id_name_put(configuration: &con
 }
 
 /// Handles adding participants to a group. You must be admin in the group or the query will fail.
-pub async fn instances_instance_key_groups_group_id_participants_add_post(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::StructsPeriodGroupUpdateParticipantsPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsAddPostError>> {
+pub async fn instances_instance_key_groups_group_id_participants_add_post(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsAddPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -596,7 +596,7 @@ pub async fn instances_instance_key_groups_group_id_participants_add_post(config
 }
 
 /// Demotes admins in groups. You must be admin in the group or the query will fail.
-pub async fn instances_instance_key_groups_group_id_participants_demote_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::StructsPeriodGroupUpdateParticipantsPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutError>> {
+pub async fn instances_instance_key_groups_group_id_participants_demote_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsDemotePutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -633,7 +633,7 @@ pub async fn instances_instance_key_groups_group_id_participants_demote_put(conf
 }
 
 /// Promotes participants to admin. You must be admin in the group or the query will fail.
-pub async fn instances_instance_key_groups_group_id_participants_promote_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::StructsPeriodGroupUpdateParticipantsPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutError>> {
+pub async fn instances_instance_key_groups_group_id_participants_promote_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsPromotePutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -670,7 +670,7 @@ pub async fn instances_instance_key_groups_group_id_participants_promote_put(con
 }
 
 /// Handles removing participants from a group. You must be admin in the group or the query will fail.
-pub async fn instances_instance_key_groups_group_id_participants_remove_delete(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::StructsPeriodGroupUpdateParticipantsPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteError>> {
+pub async fn instances_instance_key_groups_group_id_participants_remove_delete(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, data: crate::models::GroupUpdateParticipantsPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdParticipantsRemoveDeleteError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -707,7 +707,7 @@ pub async fn instances_instance_key_groups_group_id_participants_remove_delete(c
 }
 
 /// Changes the group profile picture. Currently it only seems to accept JPEG images only
-pub async fn instances_instance_key_groups_group_id_profile_pic_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, instances_instance_key_groups_group_id_profile_pic_put_request: crate::models::InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsGroupIdProfilePicPutError>> {
+pub async fn instances_instance_key_groups_group_id_profile_pic_put(configuration: &configuration::Configuration, instance_key: &str, group_id: &str, instances_instance_key_groups_group_id_profile_pic_put_request: crate::models::InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsGroupIdProfilePicPutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -744,7 +744,7 @@ pub async fn instances_instance_key_groups_group_id_profile_pic_put(configuratio
 }
 
 /// Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
-pub async fn instances_instance_key_groups_invite_info_get(configuration: &configuration::Configuration, instance_key: &str, invite_link: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGroupsInviteInfoGetError>> {
+pub async fn instances_instance_key_groups_invite_info_get(configuration: &configuration::Configuration, instance_key: &str, invite_link: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGroupsInviteInfoGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

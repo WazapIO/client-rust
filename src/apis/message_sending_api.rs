@@ -15,25 +15,14 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 
-/// struct for typed errors of method [`instances_instance_key_business_catalog_get`]
-#[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(untagged)]
-pub enum InstancesInstanceKeyBusinessCatalogGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
-    UnknownValue(serde_json::Value),
-}
-
 /// struct for typed errors of method [`instances_instance_key_send_audio_post`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendAudioPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -41,10 +30,10 @@ pub enum InstancesInstanceKeySendAudioPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendButtonMediaPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -52,10 +41,10 @@ pub enum InstancesInstanceKeySendButtonMediaPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendButtonsPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -63,10 +52,10 @@ pub enum InstancesInstanceKeySendButtonsPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendContactPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -74,10 +63,10 @@ pub enum InstancesInstanceKeySendContactPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendDocumentPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -85,10 +74,10 @@ pub enum InstancesInstanceKeySendDocumentPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendImagePostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -96,10 +85,10 @@ pub enum InstancesInstanceKeySendImagePostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendListPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -107,10 +96,10 @@ pub enum InstancesInstanceKeySendListPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendLocationPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -118,10 +107,10 @@ pub enum InstancesInstanceKeySendLocationPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendMediaPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -129,10 +118,10 @@ pub enum InstancesInstanceKeySendMediaPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendPollPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -140,10 +129,10 @@ pub enum InstancesInstanceKeySendPollPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendTemplateMediaPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -151,10 +140,10 @@ pub enum InstancesInstanceKeySendTemplateMediaPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendTemplatePostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -162,10 +151,10 @@ pub enum InstancesInstanceKeySendTemplatePostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendTextPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -173,10 +162,10 @@ pub enum InstancesInstanceKeySendTextPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendUploadPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -184,52 +173,16 @@ pub enum InstancesInstanceKeySendUploadPostError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeySendVideoPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
 
-/// Gets list of all products registered by you.
-pub async fn instances_instance_key_business_catalog_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyBusinessCatalogGetError>> {
-    let local_var_configuration = configuration;
-
-    let local_var_client = &local_var_configuration.client;
-
-    let local_var_uri_str = format!("{}/instances/{instance_key}/business/catalog", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
-
-    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
-        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
-    }
-    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
-        let local_var_key = local_var_apikey.key.clone();
-        let local_var_value = match local_var_apikey.prefix {
-            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
-            None => local_var_key,
-        };
-        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
-    };
-
-    let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
-
-    let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
-
-    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
-        serde_json::from_str(&local_var_content).map_err(Error::from)
-    } else {
-        let local_var_entity: Option<InstancesInstanceKeyBusinessCatalogGetError> = serde_json::from_str(&local_var_content).ok();
-        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
-        Err(Error::ResponseError(local_var_error))
-    }
-}
-
 /// Sends a audio message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn instances_instance_key_send_audio_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_audio_post_request: crate::models::InstancesInstanceKeySendAudioPostRequest, caption: Option<&str>) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendAudioPostError>> {
+pub async fn instances_instance_key_send_audio_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_audio_post_request: crate::models::InstancesInstanceKeySendAudioPostRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendAudioPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -270,7 +223,7 @@ pub async fn instances_instance_key_send_audio_post(configuration: &configuratio
 }
 
 /// Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
-pub async fn instances_instance_key_send_button_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodButtonMessageWithMediaPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendButtonMediaPostError>> {
+pub async fn instances_instance_key_send_button_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ButtonMessageWithMediaPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendButtonMediaPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -307,7 +260,7 @@ pub async fn instances_instance_key_send_button_media_post(configuration: &confi
 }
 
 /// Sends an interactive button message to the given user. Make sure that all the button ids are unique
-pub async fn instances_instance_key_send_buttons_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodButtonMessagePayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendButtonsPostError>> {
+pub async fn instances_instance_key_send_buttons_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ButtonMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendButtonsPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -344,7 +297,7 @@ pub async fn instances_instance_key_send_buttons_post(configuration: &configurat
 }
 
 /// Sends a contact (vcard) message to the given user.
-pub async fn instances_instance_key_send_contact_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodContactMessagePayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendContactPostError>> {
+pub async fn instances_instance_key_send_contact_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ContactMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendContactPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -381,7 +334,7 @@ pub async fn instances_instance_key_send_contact_post(configuration: &configurat
 }
 
 /// Sends a document message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn instances_instance_key_send_document_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_document_post_request: crate::models::InstancesInstanceKeySendDocumentPostRequest, caption: Option<&str>) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendDocumentPostError>> {
+pub async fn instances_instance_key_send_document_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_document_post_request: crate::models::InstancesInstanceKeySendDocumentPostRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendDocumentPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -422,7 +375,7 @@ pub async fn instances_instance_key_send_document_post(configuration: &configura
 }
 
 /// Sends a image message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn instances_instance_key_send_image_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_image_post_request: crate::models::InstancesInstanceKeySendImagePostRequest, caption: Option<&str>) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendImagePostError>> {
+pub async fn instances_instance_key_send_image_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_image_post_request: crate::models::InstancesInstanceKeySendImagePostRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendImagePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -463,7 +416,7 @@ pub async fn instances_instance_key_send_image_post(configuration: &configuratio
 }
 
 /// Sends an interactive List message to the given user.
-pub async fn instances_instance_key_send_list_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodListMessagePayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendListPostError>> {
+pub async fn instances_instance_key_send_list_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::ListMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendListPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -500,7 +453,7 @@ pub async fn instances_instance_key_send_list_post(configuration: &configuration
 }
 
 /// Sends a location message to the given user. This is static location and does not update Note: The Address and Url fields are optional
-pub async fn instances_instance_key_send_location_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodLocationMessagePayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendLocationPostError>> {
+pub async fn instances_instance_key_send_location_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::LocationMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendLocationPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -537,7 +490,7 @@ pub async fn instances_instance_key_send_location_post(configuration: &configura
 }
 
 /// Sends a media message to the given user.
-pub async fn instances_instance_key_send_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodSendMediaPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendMediaPostError>> {
+pub async fn instances_instance_key_send_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::SendMediaPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendMediaPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -573,8 +526,8 @@ pub async fn instances_instance_key_send_media_post(configuration: &configuratio
     }
 }
 
-/// Sends an interactive poll message with a media header to the given user. The poll message is a new feature that is currently in beta.
-pub async fn instances_instance_key_send_poll_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodPollMessagePayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendPollPostError>> {
+/// Sends an interactive poll message to the given user. The poll message is a new feature that is currently in beta.
+pub async fn instances_instance_key_send_poll_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::PollMessagePayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendPollPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -611,7 +564,7 @@ pub async fn instances_instance_key_send_poll_post(configuration: &configuration
 }
 
 /// Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-pub async fn instances_instance_key_send_template_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodTemplateButtonWithMediaPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendTemplateMediaPostError>> {
+pub async fn instances_instance_key_send_template_media_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TemplateButtonWithMediaPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendTemplateMediaPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -648,7 +601,7 @@ pub async fn instances_instance_key_send_template_media_post(configuration: &con
 }
 
 /// Sends an interactive template message to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
-pub async fn instances_instance_key_send_template_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodTemplateButtonPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendTemplatePostError>> {
+pub async fn instances_instance_key_send_template_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TemplateButtonPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendTemplatePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -685,7 +638,7 @@ pub async fn instances_instance_key_send_template_post(configuration: &configura
 }
 
 /// Sends a text message to the given user.
-pub async fn instances_instance_key_send_text_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodTextMessage) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendTextPostError>> {
+pub async fn instances_instance_key_send_text_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::TextMessage) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendTextPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -722,7 +675,7 @@ pub async fn instances_instance_key_send_text_post(configuration: &configuration
 }
 
 /// Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
-pub async fn instances_instance_key_send_upload_post(configuration: &configuration::Configuration, instance_key: &str, r#type: &str, instances_instance_key_send_upload_post_request: crate::models::InstancesInstanceKeySendUploadPostRequest) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendUploadPostError>> {
+pub async fn instances_instance_key_send_upload_post(configuration: &configuration::Configuration, instance_key: &str, r#type: &str, instances_instance_key_send_upload_post_request: crate::models::InstancesInstanceKeySendUploadPostRequest) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendUploadPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -760,7 +713,7 @@ pub async fn instances_instance_key_send_upload_post(configuration: &configurati
 }
 
 /// Sends a video message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn instances_instance_key_send_video_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_video_post_request: crate::models::InstancesInstanceKeySendVideoPostRequest, caption: Option<&str>) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeySendVideoPostError>> {
+pub async fn instances_instance_key_send_video_post(configuration: &configuration::Configuration, instance_key: &str, to: &str, instances_instance_key_send_video_post_request: crate::models::InstancesInstanceKeySendVideoPostRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeySendVideoPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

@@ -19,10 +19,10 @@ use super::{Error, configuration};
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesCreateGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -30,10 +30,10 @@ pub enum InstancesCreateGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyContactsGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -41,10 +41,10 @@ pub enum InstancesInstanceKeyContactsGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyDeleteDeleteError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -52,10 +52,10 @@ pub enum InstancesInstanceKeyDeleteDeleteError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -63,10 +63,10 @@ pub enum InstancesInstanceKeyGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyLogoutDeleteError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -74,10 +74,10 @@ pub enum InstancesInstanceKeyLogoutDeleteError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyQrcodeGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -85,10 +85,10 @@ pub enum InstancesInstanceKeyQrcodeGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyWebhookPutError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -96,16 +96,16 @@ pub enum InstancesInstanceKeyWebhookPutError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesListGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
 
 /// This endpoint is used to create a new WhatsApp Web instance.
-pub async fn instances_create_get(configuration: &configuration::Configuration, instance_key: Option<&str>) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesCreateGetError>> {
+pub async fn instances_create_get(configuration: &configuration::Configuration, instance_key: Option<&str>) -> Result<crate::models::ApiResponse, Error<InstancesCreateGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -144,7 +144,7 @@ pub async fn instances_create_get(configuration: &configuration::Configuration, 
 }
 
 /// Fetches the list of contacts in the instance.
-pub async fn instances_instance_key_contacts_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyContactsGetError>> {
+pub async fn instances_instance_key_contacts_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyContactsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -180,7 +180,7 @@ pub async fn instances_instance_key_contacts_get(configuration: &configuration::
 }
 
 /// Deletes the instance with the provided key.
-pub async fn instances_instance_key_delete_delete(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyDeleteDeleteError>> {
+pub async fn instances_instance_key_delete_delete(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyDeleteDeleteError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -216,7 +216,7 @@ pub async fn instances_instance_key_delete_delete(configuration: &configuration:
 }
 
 /// Returns the instance data of single instance with connection status.
-pub async fn instances_instance_key_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyGetError>> {
+pub async fn instances_instance_key_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -252,7 +252,7 @@ pub async fn instances_instance_key_get(configuration: &configuration::Configura
 }
 
 /// Logouts of the instance with the provided key.
-pub async fn instances_instance_key_logout_delete(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyLogoutDeleteError>> {
+pub async fn instances_instance_key_logout_delete(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyLogoutDeleteError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -288,7 +288,7 @@ pub async fn instances_instance_key_logout_delete(configuration: &configuration:
 }
 
 /// Returns the qrcode in the base64 format.
-pub async fn instances_instance_key_qrcode_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyQrcodeGetError>> {
+pub async fn instances_instance_key_qrcode_get(configuration: &configuration::Configuration, instance_key: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyQrcodeGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -324,7 +324,7 @@ pub async fn instances_instance_key_qrcode_get(configuration: &configuration::Co
 }
 
 /// Changes the webhook url of an instance.
-pub async fn instances_instance_key_webhook_put(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodWebhookPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyWebhookPutError>> {
+pub async fn instances_instance_key_webhook_put(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::WebhookPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyWebhookPutError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -361,7 +361,7 @@ pub async fn instances_instance_key_webhook_put(configuration: &configuration::C
 }
 
 /// Fetches the list of all Instances with login status.
-pub async fn instances_list_get(configuration: &configuration::Configuration, ) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesListGetError>> {
+pub async fn instances_list_get(configuration: &configuration::Configuration, ) -> Result<crate::models::ApiResponse, Error<InstancesListGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

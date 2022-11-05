@@ -25,6 +25,7 @@ All URIs are relative to */api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*BusinessManagementApi* | [**instances_instance_key_business_catalog_get**](docs/BusinessManagementApi.md#instances_instance_key_business_catalog_get) | **GET** /instances/{instance_key}/business/catalog | Fetches the catlog.
 *GroupManagementApi* | [**instances_instance_key_groups_admin_get**](docs/GroupManagementApi.md#instances_instance_key_groups_admin_get) | **GET** /instances/{instance_key}/groups/admin | Get admin groupss.
 *GroupManagementApi* | [**instances_instance_key_groups_create_post**](docs/GroupManagementApi.md#instances_instance_key_groups_create_post) | **POST** /instances/{instance_key}/groups/create | Create group.
 *GroupManagementApi* | [**instances_instance_key_groups_get**](docs/GroupManagementApi.md#instances_instance_key_groups_get) | **GET** /instances/{instance_key}/groups/ | Get all groups.
@@ -49,7 +50,6 @@ Class | Method | HTTP request | Description
 *InstanceApi* | [**instances_instance_key_qrcode_get**](docs/InstanceApi.md#instances_instance_key_qrcode_get) | **GET** /instances/{instance_key}/qrcode | Get QrCode.
 *InstanceApi* | [**instances_instance_key_webhook_put**](docs/InstanceApi.md#instances_instance_key_webhook_put) | **PUT** /instances/{instance_key}/webhook | Change Webhook url.
 *InstanceApi* | [**instances_list_get**](docs/InstanceApi.md#instances_list_get) | **GET** /instances/list | Get all instances.
-*MessageSendingApi* | [**instances_instance_key_business_catalog_get**](docs/MessageSendingApi.md#instances_instance_key_business_catalog_get) | **GET** /instances/{instance_key}/business/catalog | Fetches the catlog.
 *MessageSendingApi* | [**instances_instance_key_send_audio_post**](docs/MessageSendingApi.md#instances_instance_key_send_audio_post) | **POST** /instances/{instance_key}/send/audio | Send raw audio.
 *MessageSendingApi* | [**instances_instance_key_send_button_media_post**](docs/MessageSendingApi.md#instances_instance_key_send_button_media_post) | **POST** /instances/{instance_key}/send/button-media | Send a button message with a media header.
 *MessageSendingApi* | [**instances_instance_key_send_buttons_post**](docs/MessageSendingApi.md#instances_instance_key_send_buttons_post) | **POST** /instances/{instance_key}/send/buttons | Send a button message.
@@ -59,7 +59,7 @@ Class | Method | HTTP request | Description
 *MessageSendingApi* | [**instances_instance_key_send_list_post**](docs/MessageSendingApi.md#instances_instance_key_send_list_post) | **POST** /instances/{instance_key}/send/list | Send a List message.
 *MessageSendingApi* | [**instances_instance_key_send_location_post**](docs/MessageSendingApi.md#instances_instance_key_send_location_post) | **POST** /instances/{instance_key}/send/location | Send a location message.
 *MessageSendingApi* | [**instances_instance_key_send_media_post**](docs/MessageSendingApi.md#instances_instance_key_send_media_post) | **POST** /instances/{instance_key}/send/media | Send a media message.
-*MessageSendingApi* | [**instances_instance_key_send_poll_post**](docs/MessageSendingApi.md#instances_instance_key_send_poll_post) | **POST** /instances/{instance_key}/send/poll | Send a Poll message with media.
+*MessageSendingApi* | [**instances_instance_key_send_poll_post**](docs/MessageSendingApi.md#instances_instance_key_send_poll_post) | **POST** /instances/{instance_key}/send/poll | Send a Poll message.
 *MessageSendingApi* | [**instances_instance_key_send_template_media_post**](docs/MessageSendingApi.md#instances_instance_key_send_template_media_post) | **POST** /instances/{instance_key}/send/template-media | Send a template message with media.
 *MessageSendingApi* | [**instances_instance_key_send_template_post**](docs/MessageSendingApi.md#instances_instance_key_send_template_post) | **POST** /instances/{instance_key}/send/template | Send a template message.
 *MessageSendingApi* | [**instances_instance_key_send_text_post**](docs/MessageSendingApi.md#instances_instance_key_send_text_post) | **POST** /instances/{instance_key}/send/text | Send a text message.
@@ -71,36 +71,36 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [ApiResponse](docs/ApiResponse.md)
+ - [ButtonMessagePayload](docs/ButtonMessagePayload.md)
+ - [ButtonMessageWithMediaPayload](docs/ButtonMessageWithMediaPayload.md)
+ - [ContactMessagePayload](docs/ContactMessagePayload.md)
+ - [ContactMessagePayloadVcard](docs/ContactMessagePayloadVcard.md)
+ - [FileUpload](docs/FileUpload.md)
+ - [GroupCreatePayload](docs/GroupCreatePayload.md)
+ - [GroupUpdateDescriptionPayload](docs/GroupUpdateDescriptionPayload.md)
+ - [GroupUpdateNamePayload](docs/GroupUpdateNamePayload.md)
+ - [GroupUpdateParticipantsPayload](docs/GroupUpdateParticipantsPayload.md)
  - [InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest](docs/InstancesInstanceKeyGroupsGroupIdProfilePicPutRequest.md)
  - [InstancesInstanceKeySendAudioPostRequest](docs/InstancesInstanceKeySendAudioPostRequest.md)
  - [InstancesInstanceKeySendDocumentPostRequest](docs/InstancesInstanceKeySendDocumentPostRequest.md)
  - [InstancesInstanceKeySendImagePostRequest](docs/InstancesInstanceKeySendImagePostRequest.md)
  - [InstancesInstanceKeySendUploadPostRequest](docs/InstancesInstanceKeySendUploadPostRequest.md)
  - [InstancesInstanceKeySendVideoPostRequest](docs/InstancesInstanceKeySendVideoPostRequest.md)
- - [MainPeriodApiResponse](docs/MainPeriodApiResponse.md)
- - [StructsContactMessagePayloadVcard](docs/StructsContactMessagePayloadVcard.md)
- - [StructsLocationMessagePayloadLocation](docs/StructsLocationMessagePayloadLocation.md)
- - [StructsPeriodButtonMessagePayload](docs/StructsPeriodButtonMessagePayload.md)
- - [StructsPeriodButtonMessageWithMediaPayload](docs/StructsPeriodButtonMessageWithMediaPayload.md)
- - [StructsPeriodContactMessagePayload](docs/StructsPeriodContactMessagePayload.md)
- - [StructsPeriodFileUpload](docs/StructsPeriodFileUpload.md)
- - [StructsPeriodGroupCreatePayload](docs/StructsPeriodGroupCreatePayload.md)
- - [StructsPeriodGroupUpdateDescriptionPayload](docs/StructsPeriodGroupUpdateDescriptionPayload.md)
- - [StructsPeriodGroupUpdateNamePayload](docs/StructsPeriodGroupUpdateNamePayload.md)
- - [StructsPeriodGroupUpdateParticipantsPayload](docs/StructsPeriodGroupUpdateParticipantsPayload.md)
- - [StructsPeriodListItem](docs/StructsPeriodListItem.md)
- - [StructsPeriodListMessagePayload](docs/StructsPeriodListMessagePayload.md)
- - [StructsPeriodListSection](docs/StructsPeriodListSection.md)
- - [StructsPeriodLocationMessagePayload](docs/StructsPeriodLocationMessagePayload.md)
- - [StructsPeriodPollMessagePayload](docs/StructsPeriodPollMessagePayload.md)
- - [StructsPeriodReplyButton](docs/StructsPeriodReplyButton.md)
- - [StructsPeriodSendMediaPayload](docs/StructsPeriodSendMediaPayload.md)
- - [StructsPeriodTemplateButton](docs/StructsPeriodTemplateButton.md)
- - [StructsPeriodTemplateButtonPayload](docs/StructsPeriodTemplateButtonPayload.md)
- - [StructsPeriodTemplateButtonWithMediaPayload](docs/StructsPeriodTemplateButtonWithMediaPayload.md)
- - [StructsPeriodTextMessage](docs/StructsPeriodTextMessage.md)
- - [StructsPeriodUserInfoPayload](docs/StructsPeriodUserInfoPayload.md)
- - [StructsPeriodWebhookPayload](docs/StructsPeriodWebhookPayload.md)
+ - [ListItem](docs/ListItem.md)
+ - [ListMessagePayload](docs/ListMessagePayload.md)
+ - [ListSection](docs/ListSection.md)
+ - [LocationMessagePayload](docs/LocationMessagePayload.md)
+ - [LocationMessagePayloadLocation](docs/LocationMessagePayloadLocation.md)
+ - [PollMessagePayload](docs/PollMessagePayload.md)
+ - [ReplyButton](docs/ReplyButton.md)
+ - [SendMediaPayload](docs/SendMediaPayload.md)
+ - [TemplateButton](docs/TemplateButton.md)
+ - [TemplateButtonPayload](docs/TemplateButtonPayload.md)
+ - [TemplateButtonWithMediaPayload](docs/TemplateButtonWithMediaPayload.md)
+ - [TextMessage](docs/TextMessage.md)
+ - [UserInfoPayload](docs/UserInfoPayload.md)
+ - [WebhookPayload](docs/WebhookPayload.md)
 
 
 To get access to the crate's generated documentation, use:

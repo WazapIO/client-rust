@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 ## instances_create_get
 
-> crate::models::MainPeriodApiResponse instances_create_get(instance_key)
+> crate::models::ApiResponse instances_create_get(instance_key)
 Creates a new instance key.
 
 This endpoint is used to create a new WhatsApp Web instance.
@@ -31,7 +31,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -47,7 +47,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_contacts_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_contacts_get(instance_key)
+> crate::models::ApiResponse instances_instance_key_contacts_get(instance_key)
 Get contacts.
 
 Fetches the list of contacts in the instance.
@@ -61,7 +61,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_delete_delete
 
-> crate::models::MainPeriodApiResponse instances_instance_key_delete_delete(instance_key)
+> crate::models::ApiResponse instances_instance_key_delete_delete(instance_key)
 Delete Instance.
 
 Deletes the instance with the provided key.
@@ -91,7 +91,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_get(instance_key)
+> crate::models::ApiResponse instances_instance_key_get(instance_key)
 Get Instance.
 
 Returns the instance data of single instance with connection status.
@@ -121,7 +121,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_logout_delete
 
-> crate::models::MainPeriodApiResponse instances_instance_key_logout_delete(instance_key)
+> crate::models::ApiResponse instances_instance_key_logout_delete(instance_key)
 Logout Instance.
 
 Logouts of the instance with the provided key.
@@ -151,7 +151,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_qrcode_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_qrcode_get(instance_key)
+> crate::models::ApiResponse instances_instance_key_qrcode_get(instance_key)
 Get QrCode.
 
 Returns the qrcode in the base64 format.
@@ -181,7 +181,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_webhook_put
 
-> crate::models::MainPeriodApiResponse instances_instance_key_webhook_put(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_webhook_put(instance_key, data)
 Change Webhook url.
 
 Changes the webhook url of an instance.
@@ -208,11 +208,11 @@ Changes the webhook url of an instance.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodWebhookPayload**](StructsPeriodWebhookPayload.md) | Message data | [required] |
+**data** | [**WebhookPayload**](WebhookPayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_list_get
 
-> crate::models::MainPeriodApiResponse instances_list_get()
+> crate::models::ApiResponse instances_list_get()
 Get all instances.
 
 Fetches the list of all Instances with login status.
@@ -239,7 +239,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 

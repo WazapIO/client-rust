@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 ## instances_instance_key_groups_admin_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_admin_get(instance_key)
+> crate::models::ApiResponse instances_instance_key_groups_admin_get(instance_key)
 Get admin groupss.
 
 Returns list of all groups in which you are admin.
@@ -39,7 +39,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_create_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_create_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_groups_create_post(instance_key, data)
 Create group.
 
 Creates a group with the participant data. The creator is automatically added to the group.
@@ -66,11 +66,11 @@ Creates a group with the participant data. The creator is automatically added to
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodGroupCreatePayload**](StructsPeriodGroupCreatePayload.md) | Group create payload | [required] |
+**data** | [**GroupCreatePayload**](GroupCreatePayload.md) | Group create payload | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_get(instance_key, include_participants)
+> crate::models::ApiResponse instances_instance_key_groups_get(instance_key, include_participants)
 Get all groups.
 
 Returns list of all groups with participants data. Set include_participants to false to exclude participants data.
@@ -101,7 +101,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -117,7 +117,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_announce_put
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_announce_put(instance_key, announce, group_id)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_announce_put(instance_key, announce, group_id)
 Set group announce.
 
 Set if non-admins are allowed to send messages in groups
@@ -133,7 +133,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_delete
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_delete(instance_key, group_id)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_delete(instance_key, group_id)
 Leaves the group.
 
 Leaves the specified group.
@@ -164,7 +164,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -180,7 +180,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_description_put
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_description_put(instance_key, group_id, data)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_description_put(instance_key, group_id, data)
 Set group description.
 
 Changes the group description
@@ -192,11 +192,11 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
 **group_id** | **String** | Group id of the group | [required] |
-**data** | [**StructsPeriodGroupUpdateDescriptionPayload**](StructsPeriodGroupUpdateDescriptionPayload.md) | Group description data | [required] |
+**data** | [**GroupUpdateDescriptionPayload**](GroupUpdateDescriptionPayload.md) | Group description data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_get(instance_key, group_id)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_get(instance_key, group_id)
 Get group.
 
 Fetches the group data.
@@ -227,7 +227,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -243,7 +243,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_invite_code_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_invite_code_get(instance_key, group_id)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_invite_code_get(instance_key, group_id)
 Get group invite code.
 
 Gets the invite code of the group.
@@ -258,7 +258,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_lock_put
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_lock_put(instance_key, locked, group_id)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_lock_put(instance_key, locked, group_id)
 Set group locked.
 
 Set if non-admins are allowed to change the group dp and other stuff
@@ -290,7 +290,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_name_put
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_name_put(instance_key, group_id, data)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_name_put(instance_key, group_id, data)
 Set group name.
 
 Changes the group name. The max limit is 22 chars
@@ -318,11 +318,11 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
 **group_id** | **String** | Group id of the group | [required] |
-**data** | [**StructsPeriodGroupUpdateNamePayload**](StructsPeriodGroupUpdateNamePayload.md) | Group name data | [required] |
+**data** | [**GroupUpdateNamePayload**](GroupUpdateNamePayload.md) | Group name data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -338,7 +338,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_participants_add_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_participants_add_post(instance_key, group_id, data)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_participants_add_post(instance_key, group_id, data)
 Add participant.
 
 Handles adding participants to a group. You must be admin in the group or the query will fail.
@@ -350,11 +350,11 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
 **group_id** | **String** | Group id of the group | [required] |
-**data** | [**StructsPeriodGroupUpdateParticipantsPayload**](StructsPeriodGroupUpdateParticipantsPayload.md) | Group update payload | [required] |
+**data** | [**GroupUpdateParticipantsPayload**](GroupUpdateParticipantsPayload.md) | Group update payload | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_participants_demote_put
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_participants_demote_put(instance_key, group_id, data)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_participants_demote_put(instance_key, group_id, data)
 Demote participant.
 
 Demotes admins in groups. You must be admin in the group or the query will fail.
@@ -382,11 +382,11 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
 **group_id** | **String** | Group id of the group | [required] |
-**data** | [**StructsPeriodGroupUpdateParticipantsPayload**](StructsPeriodGroupUpdateParticipantsPayload.md) | Group update payload | [required] |
+**data** | [**GroupUpdateParticipantsPayload**](GroupUpdateParticipantsPayload.md) | Group update payload | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -402,7 +402,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_participants_promote_put
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_participants_promote_put(instance_key, group_id, data)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_participants_promote_put(instance_key, group_id, data)
 Promote participant.
 
 Promotes participants to admin. You must be admin in the group or the query will fail.
@@ -414,11 +414,11 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
 **group_id** | **String** | Group id of the group | [required] |
-**data** | [**StructsPeriodGroupUpdateParticipantsPayload**](StructsPeriodGroupUpdateParticipantsPayload.md) | Group update payload | [required] |
+**data** | [**GroupUpdateParticipantsPayload**](GroupUpdateParticipantsPayload.md) | Group update payload | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -434,7 +434,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_participants_remove_delete
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_participants_remove_delete(instance_key, group_id, data)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_participants_remove_delete(instance_key, group_id, data)
 Remove participant.
 
 Handles removing participants from a group. You must be admin in the group or the query will fail.
@@ -446,11 +446,11 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
 **group_id** | **String** | Group id of the group | [required] |
-**data** | [**StructsPeriodGroupUpdateParticipantsPayload**](StructsPeriodGroupUpdateParticipantsPayload.md) | Group update payload | [required] |
+**data** | [**GroupUpdateParticipantsPayload**](GroupUpdateParticipantsPayload.md) | Group update payload | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_group_id_profile_pic_put
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_group_id_profile_pic_put(instance_key, group_id, instances_instance_key_groups_group_id_profile_pic_put_request)
+> crate::models::ApiResponse instances_instance_key_groups_group_id_profile_pic_put(instance_key, group_id, instances_instance_key_groups_group_id_profile_pic_put_request)
 Set group picture.
 
 Changes the group profile picture. Currently it only seems to accept JPEG images only
@@ -482,7 +482,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -498,7 +498,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_groups_invite_info_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_groups_invite_info_get(instance_key, invite_link)
+> crate::models::ApiResponse instances_instance_key_groups_invite_info_get(instance_key, invite_link)
 Get group from invite link.
 
 Gets a group info from an invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode}
@@ -513,7 +513,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## instances_instance_key_misc_profile_pic_get
 
-> crate::models::MainPeriodApiResponse instances_instance_key_misc_profile_pic_get(instance_key, jid)
+> crate::models::ApiResponse instances_instance_key_misc_profile_pic_get(instance_key, jid)
 Get profile pic.
 
 Returns the profile pic of the given user.
@@ -26,7 +26,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -42,7 +42,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_misc_user_info_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_misc_user_info_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_misc_user_info_post(instance_key, data)
 Fetches the users info.
 
 Gets the user info for the given user ids. This does not checks if user is registered or not
@@ -53,11 +53,11 @@ Gets the user info for the given user ids. This does not checks if user is regis
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodUserInfoPayload**](StructsPeriodUserInfoPayload.md) | Data | [required] |
+**data** | [**UserInfoPayload**](UserInfoPayload.md) | Data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 

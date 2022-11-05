@@ -4,7 +4,6 @@ All URIs are relative to */api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**instances_instance_key_business_catalog_get**](MessageSendingApi.md#instances_instance_key_business_catalog_get) | **GET** /instances/{instance_key}/business/catalog | Fetches the catlog.
 [**instances_instance_key_send_audio_post**](MessageSendingApi.md#instances_instance_key_send_audio_post) | **POST** /instances/{instance_key}/send/audio | Send raw audio.
 [**instances_instance_key_send_button_media_post**](MessageSendingApi.md#instances_instance_key_send_button_media_post) | **POST** /instances/{instance_key}/send/button-media | Send a button message with a media header.
 [**instances_instance_key_send_buttons_post**](MessageSendingApi.md#instances_instance_key_send_buttons_post) | **POST** /instances/{instance_key}/send/buttons | Send a button message.
@@ -14,7 +13,7 @@ Method | HTTP request | Description
 [**instances_instance_key_send_list_post**](MessageSendingApi.md#instances_instance_key_send_list_post) | **POST** /instances/{instance_key}/send/list | Send a List message.
 [**instances_instance_key_send_location_post**](MessageSendingApi.md#instances_instance_key_send_location_post) | **POST** /instances/{instance_key}/send/location | Send a location message.
 [**instances_instance_key_send_media_post**](MessageSendingApi.md#instances_instance_key_send_media_post) | **POST** /instances/{instance_key}/send/media | Send a media message.
-[**instances_instance_key_send_poll_post**](MessageSendingApi.md#instances_instance_key_send_poll_post) | **POST** /instances/{instance_key}/send/poll | Send a Poll message with media.
+[**instances_instance_key_send_poll_post**](MessageSendingApi.md#instances_instance_key_send_poll_post) | **POST** /instances/{instance_key}/send/poll | Send a Poll message.
 [**instances_instance_key_send_template_media_post**](MessageSendingApi.md#instances_instance_key_send_template_media_post) | **POST** /instances/{instance_key}/send/template-media | Send a template message with media.
 [**instances_instance_key_send_template_post**](MessageSendingApi.md#instances_instance_key_send_template_post) | **POST** /instances/{instance_key}/send/template | Send a template message.
 [**instances_instance_key_send_text_post**](MessageSendingApi.md#instances_instance_key_send_text_post) | **POST** /instances/{instance_key}/send/text | Send a text message.
@@ -23,39 +22,9 @@ Method | HTTP request | Description
 
 
 
-## instances_instance_key_business_catalog_get
-
-> crate::models::MainPeriodApiResponse instances_instance_key_business_catalog_get(instance_key)
-Fetches the catlog.
-
-Gets list of all products registered by you.
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**instance_key** | **String** | Instance key | [required] |
-
-### Return type
-
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
-
-### Authorization
-
-[ApiKeyAuth](../README.md#ApiKeyAuth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: */*
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
 ## instances_instance_key_send_audio_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_audio_post(instance_key, to, instances_instance_key_send_audio_post_request, caption)
+> crate::models::ApiResponse instances_instance_key_send_audio_post(instance_key, to, instances_instance_key_send_audio_post_request, caption)
 Send raw audio.
 
 Sends a audio message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
@@ -72,7 +41,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -88,7 +57,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_button_media_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_button_media_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_button_media_post(instance_key, data)
 Send a button message with a media header.
 
 Sends an interactive button message to the given user. This message also has media header with it. Make sure that all the button ids are unique
@@ -99,11 +68,11 @@ Sends an interactive button message to the given user. This message also has med
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodButtonMessageWithMediaPayload**](StructsPeriodButtonMessageWithMediaPayload.md) | Message data | [required] |
+**data** | [**ButtonMessageWithMediaPayload**](ButtonMessageWithMediaPayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -119,7 +88,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_buttons_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_buttons_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_buttons_post(instance_key, data)
 Send a button message.
 
 Sends an interactive button message to the given user. Make sure that all the button ids are unique
@@ -130,11 +99,11 @@ Sends an interactive button message to the given user. Make sure that all the bu
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodButtonMessagePayload**](StructsPeriodButtonMessagePayload.md) | Message data | [required] |
+**data** | [**ButtonMessagePayload**](ButtonMessagePayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -150,7 +119,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_contact_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_contact_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_contact_post(instance_key, data)
 Send a contact message.
 
 Sends a contact (vcard) message to the given user.
@@ -161,11 +130,11 @@ Sends a contact (vcard) message to the given user.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodContactMessagePayload**](StructsPeriodContactMessagePayload.md) | Message data | [required] |
+**data** | [**ContactMessagePayload**](ContactMessagePayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -181,7 +150,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_document_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_document_post(instance_key, to, instances_instance_key_send_document_post_request, caption)
+> crate::models::ApiResponse instances_instance_key_send_document_post(instance_key, to, instances_instance_key_send_document_post_request, caption)
 Send raw document.
 
 Sends a document message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
@@ -198,7 +167,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -214,7 +183,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_image_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_image_post(instance_key, to, instances_instance_key_send_image_post_request, caption)
+> crate::models::ApiResponse instances_instance_key_send_image_post(instance_key, to, instances_instance_key_send_image_post_request, caption)
 Send raw image.
 
 Sends a image message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
@@ -231,7 +200,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -247,7 +216,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_list_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_list_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_list_post(instance_key, data)
 Send a List message.
 
 Sends an interactive List message to the given user.
@@ -258,11 +227,11 @@ Sends an interactive List message to the given user.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodListMessagePayload**](StructsPeriodListMessagePayload.md) | Message data | [required] |
+**data** | [**ListMessagePayload**](ListMessagePayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -278,7 +247,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_location_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_location_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_location_post(instance_key, data)
 Send a location message.
 
 Sends a location message to the given user. This is static location and does not update Note: The Address and Url fields are optional
@@ -289,11 +258,11 @@ Sends a location message to the given user. This is static location and does not
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodLocationMessagePayload**](StructsPeriodLocationMessagePayload.md) | Message data | [required] |
+**data** | [**LocationMessagePayload**](LocationMessagePayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -309,7 +278,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_media_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_media_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_media_post(instance_key, data)
 Send a media message.
 
 Sends a media message to the given user.
@@ -320,11 +289,11 @@ Sends a media message to the given user.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodSendMediaPayload**](StructsPeriodSendMediaPayload.md) | Message data | [required] |
+**data** | [**SendMediaPayload**](SendMediaPayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -340,10 +309,10 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_poll_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_poll_post(instance_key, data)
-Send a Poll message with media.
+> crate::models::ApiResponse instances_instance_key_send_poll_post(instance_key, data)
+Send a Poll message.
 
-Sends an interactive poll message with a media header to the given user. The poll message is a new feature that is currently in beta.
+Sends an interactive poll message to the given user. The poll message is a new feature that is currently in beta.
 
 ### Parameters
 
@@ -351,11 +320,11 @@ Sends an interactive poll message with a media header to the given user. The pol
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodPollMessagePayload**](StructsPeriodPollMessagePayload.md) | Message data | [required] |
+**data** | [**PollMessagePayload**](PollMessagePayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -371,7 +340,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_template_media_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_template_media_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_template_media_post(instance_key, data)
 Send a template message with media.
 
 Sends an interactive template message with a media header to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
@@ -382,11 +351,11 @@ Sends an interactive template message with a media header to the given user. Not
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodTemplateButtonWithMediaPayload**](StructsPeriodTemplateButtonWithMediaPayload.md) | Message data | [required] |
+**data** | [**TemplateButtonWithMediaPayload**](TemplateButtonWithMediaPayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -402,7 +371,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_template_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_template_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_template_post(instance_key, data)
 Send a template message.
 
 Sends an interactive template message to the given user. Note: The valid button types are \"replyButton\", \"urlButton\", \"callButton\"
@@ -413,11 +382,11 @@ Sends an interactive template message to the given user. Note: The valid button 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodTemplateButtonPayload**](StructsPeriodTemplateButtonPayload.md) | Message data | [required] |
+**data** | [**TemplateButtonPayload**](TemplateButtonPayload.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -433,7 +402,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_text_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_text_post(instance_key, data)
+> crate::models::ApiResponse instances_instance_key_send_text_post(instance_key, data)
 Send a text message.
 
 Sends a text message to the given user.
@@ -444,11 +413,11 @@ Sends a text message to the given user.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
-**data** | [**StructsPeriodTextMessage**](StructsPeriodTextMessage.md) | Message data | [required] |
+**data** | [**TextMessage**](TextMessage.md) | Message data | [required] |
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -464,7 +433,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_upload_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_upload_post(instance_key, r#type, instances_instance_key_send_upload_post_request)
+> crate::models::ApiResponse instances_instance_key_send_upload_post(instance_key, r#type, instances_instance_key_send_upload_post_request)
 Upload media.
 
 Uploads media to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
@@ -480,7 +449,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 
@@ -496,7 +465,7 @@ Name | Type | Description  | Required | Notes
 
 ## instances_instance_key_send_video_post
 
-> crate::models::MainPeriodApiResponse instances_instance_key_send_video_post(instance_key, to, instances_instance_key_send_video_post_request, caption)
+> crate::models::ApiResponse instances_instance_key_send_video_post(instance_key, to, instances_instance_key_send_video_post_request, caption)
 Send raw video.
 
 Sends a video message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
@@ -513,7 +482,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**crate::models::MainPeriodApiResponse**](main.APIResponse.md)
+[**crate::models::ApiResponse**](APIResponse.md)
 
 ### Authorization
 

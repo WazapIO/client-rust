@@ -19,10 +19,10 @@ use super::{Error, configuration};
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyMiscProfilePicGetError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
@@ -30,16 +30,16 @@ pub enum InstancesInstanceKeyMiscProfilePicGetError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum InstancesInstanceKeyMiscUserInfoPostError {
-    Status400(crate::models::MainPeriodApiResponse),
-    Status401(crate::models::MainPeriodApiResponse),
-    Status404(crate::models::MainPeriodApiResponse),
-    Status500(crate::models::MainPeriodApiResponse),
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
     UnknownValue(serde_json::Value),
 }
 
 
 /// Returns the profile pic of the given user.
-pub async fn instances_instance_key_misc_profile_pic_get(configuration: &configuration::Configuration, instance_key: &str, jid: &str) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyMiscProfilePicGetError>> {
+pub async fn instances_instance_key_misc_profile_pic_get(configuration: &configuration::Configuration, instance_key: &str, jid: &str) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyMiscProfilePicGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -76,7 +76,7 @@ pub async fn instances_instance_key_misc_profile_pic_get(configuration: &configu
 }
 
 /// Gets the user info for the given user ids. This does not checks if user is registered or not
-pub async fn instances_instance_key_misc_user_info_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::StructsPeriodUserInfoPayload) -> Result<crate::models::MainPeriodApiResponse, Error<InstancesInstanceKeyMiscUserInfoPostError>> {
+pub async fn instances_instance_key_misc_user_info_post(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::UserInfoPayload) -> Result<crate::models::ApiResponse, Error<InstancesInstanceKeyMiscUserInfoPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
