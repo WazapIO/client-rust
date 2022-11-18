@@ -70,6 +70,17 @@ pub enum GetAllGroupsError {
     UnknownValue(serde_json::Value),
 }
 
+/// struct for typed errors of method [`get_all_participants`]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum GetAllParticipantsError {
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
+    UnknownValue(serde_json::Value),
+}
+
 /// struct for typed errors of method [`get_group`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
@@ -96,6 +107,17 @@ pub enum GetGroupFromInviteLinkError {
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
 pub enum GetGroupInviteCodeError {
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
+    UnknownValue(serde_json::Value),
+}
+
+/// struct for typed errors of method [`join_group_with_link`]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum JoinGroupWithLinkError {
     Status400(crate::models::ApiResponse),
     Status401(crate::models::ApiResponse),
     Status404(crate::models::ApiResponse),
@@ -378,6 +400,42 @@ pub async fn get_all_groups(configuration: &configuration::Configuration, instan
     }
 }
 
+/// Returns all participants of the group.
+pub async fn get_all_participants(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<GetAllParticipantsError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/{group_id}/participants", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key), group_id=crate::apis::urlencode(group_id));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<GetAllParticipantsError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
 /// Fetches the group data.
 pub async fn get_group(configuration: &configuration::Configuration, instance_key: &str, group_id: &str) -> Result<crate::models::ApiResponse, Error<GetGroupError>> {
     let local_var_configuration = configuration;
@@ -482,6 +540,43 @@ pub async fn get_group_invite_code(configuration: &configuration::Configuration,
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
         let local_var_entity: Option<GetGroupInviteCodeError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Joins a group with group invite link. An invite link is a link that can be used to join a group. It is usually in the format https://chat.whatsapp.com/{invitecode} You have to put invite_code in the url of the request. The invite code is the part after https://chat.whatsapp.com/ For example, if the invite link is https://chat.whatsapp.com/dsfsf34r3d3dsds, then the invite code is `dsfsf34r3d3dsds“
+pub async fn join_group_with_link(configuration: &configuration::Configuration, instance_key: &str, invite_code: &str) -> Result<crate::models::ApiResponse, Error<JoinGroupWithLinkError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/groups/join", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("invite_code", &invite_code.to_string())]);
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<JoinGroupWithLinkError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

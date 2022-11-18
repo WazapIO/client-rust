@@ -70,6 +70,17 @@ pub enum SendDocumentError {
     UnknownValue(serde_json::Value),
 }
 
+/// struct for typed errors of method [`send_group_invite`]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum SendGroupInviteError {
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
+    UnknownValue(serde_json::Value),
+}
+
 /// struct for typed errors of method [`send_image`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
@@ -374,8 +385,45 @@ pub async fn send_document(configuration: &configuration::Configuration, instanc
     }
 }
 
+/// Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+pub async fn send_group_invite(configuration: &configuration::Configuration, instance_key: &str, data: crate::models::GroupInviteMessagePayload) -> Result<crate::models::ApiResponse, Error<SendGroupInviteError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/send/group-invite", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SendGroupInviteError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
 /// Sends a image message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
-pub async fn send_image(configuration: &configuration::Configuration, instance_key: &str, to: &str, send_image_request: crate::models::SendImageRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<SendImageError>> {
+pub async fn send_image(configuration: &configuration::Configuration, instance_key: &str, to: &str, update_profile_pic_request: crate::models::UpdateProfilePicRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<SendImageError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -398,7 +446,7 @@ pub async fn send_image(configuration: &configuration::Configuration, instance_k
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
-    local_var_req_builder = local_var_req_builder.json(&send_image_request);
+    local_var_req_builder = local_var_req_builder.json(&update_profile_pic_request);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;

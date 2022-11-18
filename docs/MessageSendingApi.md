@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**send_button_with_media**](MessageSendingApi.md#send_button_with_media) | **POST** /instances/{instance_key}/send/button-media | Send a button message with a media header.
 [**send_contact**](MessageSendingApi.md#send_contact) | **POST** /instances/{instance_key}/send/contact | Send a contact message.
 [**send_document**](MessageSendingApi.md#send_document) | **POST** /instances/{instance_key}/send/document | Send raw document.
+[**send_group_invite**](MessageSendingApi.md#send_group_invite) | **POST** /instances/{instance_key}/send/group-invite | Send a group invite message
 [**send_image**](MessageSendingApi.md#send_image) | **POST** /instances/{instance_key}/send/image | Send raw image.
 [**send_list_message**](MessageSendingApi.md#send_list_message) | **POST** /instances/{instance_key}/send/list | Send a List message.
 [**send_location**](MessageSendingApi.md#send_location) | **POST** /instances/{instance_key}/send/location | Send a location message.
@@ -181,9 +182,40 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## send_group_invite
+
+> crate::models::ApiResponse send_group_invite(instance_key, data)
+Send a group invite message
+
+Sends a group invite message to the specified number. Don't include \"https://chat.whatsapp.com/\" in the invite code.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**instance_key** | **String** | Instance key | [required] |
+**data** | [**GroupInviteMessagePayload**](GroupInviteMessagePayload.md) | Message data | [required] |
+
+### Return type
+
+[**crate::models::ApiResponse**](APIResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## send_image
 
-> crate::models::ApiResponse send_image(instance_key, to, send_image_request, caption)
+> crate::models::ApiResponse send_image(instance_key, to, update_profile_pic_request, caption)
 Send raw image.
 
 Sends a image message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
@@ -195,7 +227,7 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **instance_key** | **String** | Instance key | [required] |
 **to** | **String** | The recipient's number | [required] |
-**send_image_request** | [**SendImageRequest**](SendImageRequest.md) |  | [required] |
+**update_profile_pic_request** | [**UpdateProfilePicRequest**](UpdateProfilePicRequest.md) |  | [required] |
 **caption** | Option<**String**> | Attached caption |  |
 
 ### Return type

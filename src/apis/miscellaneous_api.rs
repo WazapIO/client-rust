@@ -15,6 +15,17 @@ use crate::apis::ResponseContent;
 use super::{Error, configuration};
 
 
+/// struct for typed errors of method [`download_media`]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum DownloadMediaError {
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
+    UnknownValue(serde_json::Value),
+}
+
 /// struct for typed errors of method [`get_profile_pic`]
 #[derive(Debug, Clone, Serialize, Deserialize)]
 #[serde(untagged)]
@@ -37,6 +48,69 @@ pub enum GetUsersInfoError {
     UnknownValue(serde_json::Value),
 }
 
+/// struct for typed errors of method [`set_chat_presence`]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum SetChatPresenceError {
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
+    UnknownValue(serde_json::Value),
+}
+
+/// struct for typed errors of method [`update_profile_pic`]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum UpdateProfilePicError {
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
+    UnknownValue(serde_json::Value),
+}
+
+
+/// Downloads the media from the given media keys.
+pub async fn download_media(configuration: &configuration::Configuration, instance_key: &str, file_type: &str, data: crate::models::FileUpload, response_type: Option<&str>) -> Result<crate::models::ApiResponse, Error<DownloadMediaError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/misc/download", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("file_type", &file_type.to_string())]);
+    if let Some(ref local_var_str) = response_type {
+        local_var_req_builder = local_var_req_builder.query(&[("response_type", &local_var_str.to_string())]);
+    }
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<DownloadMediaError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
 
 /// Returns the profile pic of the given user.
 pub async fn get_profile_pic(configuration: &configuration::Configuration, instance_key: &str, jid: &str) -> Result<crate::models::ApiResponse, Error<GetProfilePicError>> {
@@ -107,6 +181,81 @@ pub async fn get_users_info(configuration: &configuration::Configuration, instan
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
         let local_var_entity: Option<GetUsersInfoError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Sets the presence of the given chat. (Typing, Recording, Paused) Options: typing, recording, paused
+pub async fn set_chat_presence(configuration: &configuration::Configuration, instance_key: &str, jid: &str, presence: &str) -> Result<crate::models::ApiResponse, Error<SetChatPresenceError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/misc/chat-presence", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("jid", &jid.to_string())]);
+    local_var_req_builder = local_var_req_builder.query(&[("presence", &presence.to_string())]);
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<SetChatPresenceError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Changes the profile pic of the current logged in user.
+pub async fn update_profile_pic(configuration: &configuration::Configuration, instance_key: &str, update_profile_pic_request: crate::models::UpdateProfilePicRequest) -> Result<crate::models::ApiResponse, Error<UpdateProfilePicError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/misc/profile-pic", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::PUT, local_var_uri_str.as_str());
+
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&update_profile_pic_request);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<UpdateProfilePicError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }
