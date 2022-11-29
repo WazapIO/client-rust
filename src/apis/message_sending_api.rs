@@ -191,6 +191,17 @@ pub enum UploadMediaError {
     UnknownValue(serde_json::Value),
 }
 
+/// struct for typed errors of method [`upload_media_from_url`]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(untagged)]
+pub enum UploadMediaFromUrlError {
+    Status400(crate::models::ApiResponse),
+    Status401(crate::models::ApiResponse),
+    Status404(crate::models::ApiResponse),
+    Status500(crate::models::ApiResponse),
+    UnknownValue(serde_json::Value),
+}
+
 
 /// Sends a audio message by uploading to the WhatsApp servers every time. This is not recommended for bulk sending.
 pub async fn send_audio(configuration: &configuration::Configuration, instance_key: &str, to: &str, send_audio_request: crate::models::SendAudioRequest, caption: Option<&str>) -> Result<crate::models::ApiResponse, Error<SendAudioError>> {
@@ -796,6 +807,44 @@ pub async fn upload_media(configuration: &configuration::Configuration, instance
         serde_json::from_str(&local_var_content).map_err(Error::from)
     } else {
         let local_var_entity: Option<UploadMediaError> = serde_json::from_str(&local_var_content).ok();
+        let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
+        Err(Error::ResponseError(local_var_error))
+    }
+}
+
+/// Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+pub async fn upload_media_from_url(configuration: &configuration::Configuration, instance_key: &str, r#type: &str, data: crate::models::UrlMediaUploadPayload) -> Result<crate::models::ApiResponse, Error<UploadMediaFromUrlError>> {
+    let local_var_configuration = configuration;
+
+    let local_var_client = &local_var_configuration.client;
+
+    let local_var_uri_str = format!("{}/instances/{instance_key}/send/upload-url", local_var_configuration.base_path, instance_key=crate::apis::urlencode(instance_key));
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
+
+    local_var_req_builder = local_var_req_builder.query(&[("type", &r#type.to_string())]);
+    if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
+        local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
+    }
+    if let Some(ref local_var_apikey) = local_var_configuration.api_key {
+        let local_var_key = local_var_apikey.key.clone();
+        let local_var_value = match local_var_apikey.prefix {
+            Some(ref local_var_prefix) => format!("{} {}", local_var_prefix, local_var_key),
+            None => local_var_key,
+        };
+        local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
+    };
+    local_var_req_builder = local_var_req_builder.json(&data);
+
+    let local_var_req = local_var_req_builder.build()?;
+    let local_var_resp = local_var_client.execute(local_var_req).await?;
+
+    let local_var_status = local_var_resp.status();
+    let local_var_content = local_var_resp.text().await?;
+
+    if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
+        serde_json::from_str(&local_var_content).map_err(Error::from)
+    } else {
+        let local_var_entity: Option<UploadMediaFromUrlError> = serde_json::from_str(&local_var_content).ok();
         let local_var_error = ResponseContent { status: local_var_status, content: local_var_content, entity: local_var_entity };
         Err(Error::ResponseError(local_var_error))
     }

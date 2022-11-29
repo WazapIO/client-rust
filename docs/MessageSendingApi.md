@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**send_text_message**](MessageSendingApi.md#send_text_message) | **POST** /instances/{instance_key}/send/text | Send a text message.
 [**send_video**](MessageSendingApi.md#send_video) | **POST** /instances/{instance_key}/send/video | Send raw video.
 [**upload_media**](MessageSendingApi.md#upload_media) | **POST** /instances/{instance_key}/send/upload | Upload media.
+[**upload_media_from_url**](MessageSendingApi.md#upload_media_from_url) | **POST** /instances/{instance_key}/send/upload-url | Upload media from url.
 
 
 
@@ -511,6 +512,38 @@ Name | Type | Description  | Required | Notes
 **instance_key** | **String** | Instance key | [required] |
 **r#type** | **String** | Media type | [required] |
 **upload_media_request** | [**UploadMediaRequest**](UploadMediaRequest.md) |  | [required] |
+
+### Return type
+
+[**crate::models::ApiResponse**](APIResponse.md)
+
+### Authorization
+
+[ApiKeyAuth](../README.md#ApiKeyAuth)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: */*
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## upload_media_from_url
+
+> crate::models::ApiResponse upload_media_from_url(instance_key, r#type, data)
+Upload media from url.
+
+Uploads media from a url to WhatsApp servers and returns the media keys. Store the returned media keys, as you will need them to send media messages
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**instance_key** | **String** | Instance key | [required] |
+**r#type** | **String** | Media type | [required] |
+**data** | [**UrlMediaUploadPayload**](UrlMediaUploadPayload.md) | Media data | [required] |
 
 ### Return type
 

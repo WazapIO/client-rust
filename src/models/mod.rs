@@ -58,6 +58,8 @@ pub mod update_profile_pic_request;
 pub use self::update_profile_pic_request::UpdateProfilePicRequest;
 pub mod upload_media_request;
 pub use self::upload_media_request::UploadMediaRequest;
+pub mod url_media_upload_payload;
+pub use self::url_media_upload_payload::UrlMediaUploadPayload;
 pub mod user_info_payload;
 pub use self::user_info_payload::UserInfoPayload;
 pub mod webhook_payload;
