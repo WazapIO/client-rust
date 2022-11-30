@@ -8,6 +8,8 @@ pub mod contact_message_payload;
 pub use self::contact_message_payload::ContactMessagePayload;
 pub mod contact_message_payload_vcard;
 pub use self::contact_message_payload_vcard::ContactMessagePayloadVcard;
+pub mod create_instance_payload;
+pub use self::create_instance_payload::CreateInstancePayload;
 pub mod file_upload;
 pub use self::file_upload::FileUpload;
 pub mod group_create_payload;

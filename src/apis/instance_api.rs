@@ -142,17 +142,14 @@ pub async fn change_webhook_url(configuration: &configuration::Configuration, in
 }
 
 /// This endpoint is used to create a new WhatsApp Web instance.
-pub async fn create_instance(configuration: &configuration::Configuration, instance_key: Option<&str>) -> Result<crate::models::ApiResponse, Error<CreateInstanceError>> {
+pub async fn create_instance(configuration: &configuration::Configuration, data: crate::models::CreateInstancePayload) -> Result<crate::models::ApiResponse, Error<CreateInstanceError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
 
     let local_var_uri_str = format!("{}/instances/create", local_var_configuration.base_path);
-    let mut local_var_req_builder = local_var_client.request(reqwest::Method::GET, local_var_uri_str.as_str());
+    let mut local_var_req_builder = local_var_client.request(reqwest::Method::POST, local_var_uri_str.as_str());
 
-    if let Some(ref local_var_str) = instance_key {
-        local_var_req_builder = local_var_req_builder.query(&[("instance_key", &local_var_str.to_string())]);
-    }
     if let Some(ref local_var_user_agent) = local_var_configuration.user_agent {
         local_var_req_builder = local_var_req_builder.header(reqwest::header::USER_AGENT, local_var_user_agent.clone());
     }
@@ -164,6 +161,7 @@ pub async fn create_instance(configuration: &configuration::Configuration, insta
         };
         local_var_req_builder = local_var_req_builder.header("Authorization", local_var_value);
     };
+    local_var_req_builder = local_var_req_builder.json(&data);
 
     let local_var_req = local_var_req_builder.build()?;
     let local_var_resp = local_var_client.execute(local_var_req).await?;

@@ -46,7 +46,7 @@ Class | Method | HTTP request | Description
 *GroupManagementApi* | [**set_group_name**](docs/GroupManagementApi.md#set_group_name) | **PUT** /instances/{instance_key}/groups/{group_id}/name | Set group name.
 *GroupManagementApi* | [**set_group_picture**](docs/GroupManagementApi.md#set_group_picture) | **PUT** /instances/{instance_key}/groups/{group_id}/profile-pic | Set group picture.
 *InstanceApi* | [**change_webhook_url**](docs/InstanceApi.md#change_webhook_url) | **PUT** /instances/{instance_key}/webhook | Change Webhook url.
-*InstanceApi* | [**create_instance**](docs/InstanceApi.md#create_instance) | **GET** /instances/create | Creates a new instance key.
+*InstanceApi* | [**create_instance**](docs/InstanceApi.md#create_instance) | **POST** /instances/create | Creates a new instance key.
 *InstanceApi* | [**delete_instance**](docs/InstanceApi.md#delete_instance) | **DELETE** /instances/{instance_key}/delete | Delete Instance.
 *InstanceApi* | [**get_contacts**](docs/InstanceApi.md#get_contacts) | **GET** /instances/{instance_key}/contacts | Get contacts.
 *InstanceApi* | [**get_instance**](docs/InstanceApi.md#get_instance) | **GET** /instances/{instance_key}/ | Get Instance.
@@ -84,6 +84,7 @@ Class | Method | HTTP request | Description
  - [ButtonMessageWithMediaPayload](docs/ButtonMessageWithMediaPayload.md)
  - [ContactMessagePayload](docs/ContactMessagePayload.md)
  - [ContactMessagePayloadVcard](docs/ContactMessagePayloadVcard.md)
+ - [CreateInstancePayload](docs/CreateInstancePayload.md)
  - [FileUpload](docs/FileUpload.md)
  - [GroupCreatePayload](docs/GroupCreatePayload.md)
  - [GroupInviteMessagePayload](docs/GroupInviteMessagePayload.md)

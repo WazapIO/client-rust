@@ -5,7 +5,7 @@ All URIs are relative to */api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**change_webhook_url**](InstanceApi.md#change_webhook_url) | **PUT** /instances/{instance_key}/webhook | Change Webhook url.
-[**create_instance**](InstanceApi.md#create_instance) | **GET** /instances/create | Creates a new instance key.
+[**create_instance**](InstanceApi.md#create_instance) | **POST** /instances/create | Creates a new instance key.
 [**delete_instance**](InstanceApi.md#delete_instance) | **DELETE** /instances/{instance_key}/delete | Delete Instance.
 [**get_contacts**](InstanceApi.md#get_contacts) | **GET** /instances/{instance_key}/contacts | Get contacts.
 [**get_instance**](InstanceApi.md#get_instance) | **GET** /instances/{instance_key}/ | Get Instance.
@@ -48,7 +48,7 @@ Name | Type | Description  | Required | Notes
 
 ## create_instance
 
-> crate::models::ApiResponse create_instance(instance_key)
+> crate::models::ApiResponse create_instance(data)
 Creates a new instance key.
 
 This endpoint is used to create a new WhatsApp Web instance.
@@ -58,7 +58,7 @@ This endpoint is used to create a new WhatsApp Web instance.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**instance_key** | Option<**String**> | Insert instance key if you want to provide custom key |  |
+**data** | [**CreateInstancePayload**](CreateInstancePayload.md) | Instance data | [required] |
 
 ### Return type
 
@@ -70,7 +70,7 @@ Name | Type | Description  | Required | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: */*
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

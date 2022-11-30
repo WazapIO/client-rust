@@ -8,6 +8,7 @@ docs/ButtonMessagePayload.md
 docs/ButtonMessageWithMediaPayload.md
 docs/ContactMessagePayload.md
 docs/ContactMessagePayloadVcard.md
+docs/CreateInstancePayload.md
 docs/FileUpload.md
 docs/GroupCreatePayload.md
 docs/GroupInviteMessagePayload.md
@@ -54,6 +55,7 @@ src/models/button_message_payload.rs
 src/models/button_message_with_media_payload.rs
 src/models/contact_message_payload.rs
 src/models/contact_message_payload_vcard.rs
+src/models/create_instance_payload.rs
 src/models/file_upload.rs
 src/models/group_create_payload.rs
 src/models/group_invite_message_payload.rs
